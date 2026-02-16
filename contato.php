@@ -10,11 +10,10 @@
 
 		<link rel="shortcut icon" href="icone.png" type="image/x-icon"/>
 
-		<script src="assets/js/main.js"></script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="main.css" />
 
 			<link rel=”canonical” href=”www.transladovipexpress.com.br/contato.php” />
 
@@ -514,7 +513,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 				<!-- JS -->
 
-			<script src="assets/js/skel.min.js"></script>
+			<script src="skel.min.js"></script>
 
-			<script src="assets/js/main.js"></script>
 
