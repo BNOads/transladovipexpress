@@ -583,31 +583,137 @@ function googleTranslateElementInit2() {
       <div style="background: #700303; color: #fff; padding: 1.5rem; border-radius: 10px; margin: 2rem 0; text-align: center;">
         <h3 style="margin-top: 0; color: #fff;">Precisa de taxi ou transfer em Confins?</h3>
         <p>Preco fixo, reserva antecipada e motorista credenciado esperando por voce.</p>
-        <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ola,%20gostaria%20de%20um%20orcamento%20de%20taxi%20em%20Confins" class="button special" style="margin-top: 10px; background: #fff; color: #700303;" target="_blank" rel="noopener noreferrer">
+        <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ola,%20gostaria%20de%20um%20orcamento%20de%20taxi%20em%20Confins" class="button special" style="margin-top: 10px; background: #fff; color: #700303 !important; border: 1px solid #fff;" target="_blank" rel="noopener noreferrer">
           <span class="fa fa-whatsapp"></span> Solicitar Orcamento
         </a>
       </div>
 
       <!-- FAQ -->
-      <h3 style="color: #700303; margin-top: 2.5rem;">Perguntas Frequentes</h3>
-
-      <h4 style="color: #700303;">Qual a diferenca entre taxi credenciado e Uber no Aeroporto de Confins?</h4>
-      <p>O taxi credenciado tem autorizacao para embarque dentro do aeroporto, pode usar pistas do MOVE em BH, aceita reserva antecipada e oferece preco combinado. O Uber tem preco dinamico, ponto de embarque externo e nao aceita reserva com antecedencia.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Quanto custa o Uber de Confins para BH?</h4>
-      <p>O Uber de Confins para BH custa em media entre <strong>R$ 65 e R$ 105</strong>, dependendo do horario, demanda e tipo de veiculo (UberX, Comfort ou Black). Em horarios de pico ou madrugada, o preco pode ser significativamente mais alto.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Quanto custa o taxi de Confins para Belo Horizonte?</h4>
-      <p>O taxi credenciado de Confins para BH custa em media <strong>R$ 120</strong>, com preco fixo tabelado. O valor nao muda por horario ou demanda.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Como funciona o onibus do Aeroporto de Confins?</h4>
-      <p>A empresa Conexao Aeroporto opera duas linhas: <strong>Convencional</strong> (R$ 12,10, varias paradas) e <strong>Executivo</strong> (R$ 26,75, direto para Lourdes). O primeiro sai as 5h15 e o ultimo a 0h20. Nao opera de madrugada.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Uber funciona de madrugada no Aeroporto de Confins?</h4>
-      <p>O Uber funciona 24h em teoria, mas de madrugada a disponibilidade de motoristas e reduzida e o preco dinamico costuma ser mais alto. O taxi credenciado com reserva antecipada e mais confiavel para voos de madrugada.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Qual o melhor transporte de Confins para Ouro Preto?</h4>
-      <p>Para Ouro Preto, o <a href="transfer-confins-ouro-preto.html">transfer executivo privado</a> e a melhor opcao, pois nao ha onibus direto do aeroporto. A Translado Vip Express oferece transfer com preco fixo, motorista experiente e veiculo para ate 6 passageiros.</p>
+      <div class="faq-comparison">
+        <h3 style="color: #700303; margin-top: 2.5rem;">Perguntas Frequentes</h3>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual a diferenca entre taxi credenciado e Uber no Aeroporto de Confins?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>O taxi credenciado tem autorizacao para embarque dentro do aeroporto, pode usar pistas do MOVE em BH, aceita reserva antecipada e oferece preco combinado. O Uber tem preco dinamico, ponto de embarque externo e nao aceita reserva com antecedencia.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto custa o Uber de Confins para BH?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>O Uber de Confins para BH custa em media entre <strong>R$ 65 e R$ 105</strong>, dependendo do horario, demanda e tipo de veiculo (UberX, Comfort ou Black). Em horarios de pico ou madrugada, o preco pode ser significativamente mais alto.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto custa o taxi de Confins para Belo Horizonte?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>O taxi credenciado de Confins para BH custa em media <strong>R$ 120</strong>, com preco fixo tabelado. O valor nao muda por horario ou demanda.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como funciona o onibus do Aeroporto de Confins?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>A empresa Conexao Aeroporto opera duas linhas: <strong>Convencional</strong> (R$ 12,10, varias paradas) e <strong>Executivo</strong> (R$ 26,75, direto para Lourdes). O primeiro sai as 5h15 e o ultimo a 0h20. Nao opera de madrugada.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Uber funciona de madrugada no Aeroporto de Confins?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>O Uber funciona 24h em teoria, mas de madrugada a disponibilidade de motoristas e reduzida e o preco dinamico costuma ser mais alto. O taxi credenciado com reserva antecipada e mais confiavel para voos de madrugada.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual o melhor transporte de Confins para Ouro Preto?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>Para Ouro Preto, o <a href="transfer-confins-ouro-preto.html">transfer executivo privado</a> e a melhor opcao, pois nao ha onibus direto do aeroporto. A Translado Vip Express oferece transfer com preco fixo, motorista experiente e veiculo para ate 6 passageiros.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+      .faq-comparison .faq-list {
+        border-top: 1px solid #f0d6d5;
+        margin-top: 0.5rem;
+      }
+      .faq-comparison .faq-item {
+        border-bottom: 1px solid #f0d6d5;
+      }
+      .faq-comparison .faq-question {
+        width: 100%;
+        border: 0;
+        background: #fff;
+        color: #700303;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .faq-comparison .faq-question span:first-child {
+        flex: 1;
+      }
+      .faq-comparison .faq-icon {
+        color: #700303;
+        transition: transform 0.25s ease;
+      }
+      .faq-comparison .faq-question.active .faq-icon {
+        transform: rotate(180deg);
+      }
+      .faq-comparison .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .faq-comparison .faq-answer p {
+        margin: 0;
+        padding: 0 0.5rem 1rem;
+      }
+      </style>
+      <script>
+      (function() {
+        const scope = document.querySelector('.faq-comparison');
+        if (!scope) return;
+        const questions = scope.querySelectorAll('.faq-question');
+        questions.forEach((question) => {
+          question.addEventListener('click', () => {
+            const isOpen = question.classList.contains('active');
+            questions.forEach((q) => {
+              q.classList.remove('active');
+              q.setAttribute('aria-expanded', 'false');
+              const answer = q.nextElementSibling;
+              if (answer) answer.style.maxHeight = null;
+            });
+            if (!isOpen) {
+              question.classList.add('active');
+              question.setAttribute('aria-expanded', 'true');
+              const answer = question.nextElementSibling;
+              if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+          });
+        });
+      })();
+      </script>
 
       <!-- Ultima atualizacao -->
       <p style="font-size: 0.85rem; color: #888; margin-top: 2rem; text-align: center;">

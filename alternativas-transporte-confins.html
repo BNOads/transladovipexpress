@@ -471,25 +471,119 @@ function googleTranslateElementInit2() {
       </ul>
 
       <!-- FAQ -->
-      <h3 style="color: #700303; margin-top: 2.5rem;">Perguntas Frequentes</h3>
-
-      <h4 style="color: #700303;">Qual a melhor empresa de transfer de Confins para Ouro Preto?</h4>
-      <p>As principais opcoes sao: <strong>Translado Vip Express</strong> (taxi credenciado, ate 6 passageiros), Desbrava Minas (vans para ate 15 pessoas), Matrix Tur e Ouro Preto Travel. A escolha depende do tamanho do grupo e orcamento.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Quanto custa um transfer de Confins para Ouro Preto?</h4>
-      <p>Os precos variam: taxi credenciado para ate 6 pessoas fica entre <strong>R$ 350-500</strong>; vans para grupos maiores a partir de R$ 780. O valor depende do tipo de veiculo e numero de passageiros. <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ola,%20gostaria%20de%20orcamento%20para%20transfer%20Confins%20Ouro%20Preto" target="_blank" rel="noopener noreferrer">Consulte pelo WhatsApp</a>.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Tem onibus direto de Confins para Ouro Preto?</h4>
-      <p><strong>Nao.</strong> Nao ha onibus direto do Aeroporto de Confins para Ouro Preto. E necessario ir ate a Rodoviaria de BH e pegar outro onibus, o que leva cerca de 4-5 horas no total. O <a href="transfer-confins-ouro-preto.html">transfer privado</a> faz o trajeto direto em 1h30.</p>
-
-      <h4 style="color: #700303; margin-top: 1.5rem;">Vale a pena alugar carro em Confins para ir a Ouro Preto?</h4>
-      <p>Depende. Se voce pretende ficar varios dias e visitar outras cidades, pode valer a pena. Porem, Ouro Preto tem ruas estreitas e estacionamento dificil. Para ida e volta, o transfer privado costuma ser mais pratico e economico considerando todos os custos.</p>
+      <div class="faq-comparison">
+        <h3 style="color: #700303; margin-top: 2.5rem;">Perguntas Frequentes</h3>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual a melhor empresa de transfer de Confins para Ouro Preto?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>As principais opcoes sao: <strong>Translado Vip Express</strong> (taxi credenciado, ate 6 passageiros), Desbrava Minas (vans para ate 15 pessoas), Matrix Tur e Ouro Preto Travel. A escolha depende do tamanho do grupo e orcamento.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quanto custa um transfer de Confins para Ouro Preto?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>Os precos variam: taxi credenciado para ate 6 pessoas fica entre <strong>R$ 350-500</strong>; vans para grupos maiores a partir de R$ 780. O valor depende do tipo de veiculo e numero de passageiros. <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ola,%20gostaria%20de%20orcamento%20para%20transfer%20Confins%20Ouro%20Preto" target="_blank" rel="noopener noreferrer">Consulte pelo WhatsApp</a>.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Tem onibus direto de Confins para Ouro Preto?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Nao.</strong> Nao ha onibus direto do Aeroporto de Confins para Ouro Preto. E necessario ir ate a Rodoviaria de BH e pegar outro onibus, o que leva cerca de 4-5 horas no total. O <a href="transfer-confins-ouro-preto.html">transfer privado</a> faz o trajeto direto em 1h30.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Vale a pena alugar carro em Confins para ir a Ouro Preto?</span>
+              <span class="faq-icon">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>Depende. Se voce pretende ficar varios dias e visitar outras cidades, pode valer a pena. Porem, Ouro Preto tem ruas estreitas e estacionamento dificil. Para ida e volta, o transfer privado costuma ser mais pratico e economico considerando todos os custos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+      .faq-comparison .faq-list {
+        border-top: 1px solid #f0d6d5;
+        margin-top: 0.5rem;
+      }
+      .faq-comparison .faq-item {
+        border-bottom: 1px solid #f0d6d5;
+      }
+      .faq-comparison .faq-question {
+        width: 100%;
+        border: 0;
+        background: #fff;
+        color: #700303;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .faq-comparison .faq-question span:first-child {
+        flex: 1;
+      }
+      .faq-comparison .faq-icon {
+        color: #700303;
+        transition: transform 0.25s ease;
+      }
+      .faq-comparison .faq-question.active .faq-icon {
+        transform: rotate(180deg);
+      }
+      .faq-comparison .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .faq-comparison .faq-answer p {
+        margin: 0;
+        padding: 0 0.5rem 1rem;
+      }
+      </style>
+      <script>
+      (function() {
+        const scope = document.querySelector('.faq-comparison');
+        if (!scope) return;
+        const questions = scope.querySelectorAll('.faq-question');
+        questions.forEach((question) => {
+          question.addEventListener('click', () => {
+            const isOpen = question.classList.contains('active');
+            questions.forEach((q) => {
+              q.classList.remove('active');
+              q.setAttribute('aria-expanded', 'false');
+              const answer = q.nextElementSibling;
+              if (answer) answer.style.maxHeight = null;
+            });
+            if (!isOpen) {
+              question.classList.add('active');
+              question.setAttribute('aria-expanded', 'true');
+              const answer = question.nextElementSibling;
+              if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+          });
+        });
+      })();
+      </script>
 
       <!-- CTA final -->
       <div style="background: #700303; color: #fff; padding: 1.5rem; border-radius: 10px; margin: 2rem 0; text-align: center;">
         <h3 style="margin-top: 0; color: #fff;">Precisa de transporte saindo de Confins?</h3>
         <p>Transfer para BH, Ouro Preto, Inhotim, Diamantina e toda Minas Gerais.</p>
-        <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ola,%20gostaria%20de%20um%20orcamento%20de%20transfer%20saindo%20de%20Confins" class="button special" style="margin-top: 10px; background: #fff; color: #700303;" target="_blank" rel="noopener noreferrer">
+        <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ola,%20gostaria%20de%20um%20orcamento%20de%20transfer%20saindo%20de%20Confins" class="button special" style="margin-top: 10px; background: #fff; color: #700303 !important; border: 1px solid #fff;" target="_blank" rel="noopener noreferrer">
           <span class="fa fa-whatsapp"></span> Solicitar Orcamento
         </a>
       </div>
