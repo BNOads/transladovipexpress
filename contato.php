@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<a href="#" onclick="doGTranslate('pt|es');return false;" title="Spanish" class="gflag nturl" style="background-position:-60px -20px;"><img src="https://images.emojiterra.com/twitter/v13.0/512px/1f1ea-1f1f8.png" height="32" width="32" /></a></div></header><a title="Barras" href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+<a href="#" onclick="doGTranslate('pt|es');return false;" title="Spanish" class="gflag nturl" style="background-position:-60px -20px;"><img src="https://images.emojiterra.com/twitter/v13.0/512px/1f1ea-1f1f8.png" height="32" width="32" alt="Spanish" /></a></div></header><a title="Barras" href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 						</nav>
 

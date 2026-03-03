@@ -1,141 +1,23 @@
 <!DOCTYPE HTML>
 <html lang="pt-BR">
 <head>
-    
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TaxiService",
-  "@id": "https://www.transladovipexpress.com.br/#business",
-  "name": "Translado Vip Express",
-  "image": "https://www.transladovipexpress.com.br/ouro.webp",
-  "url": "https://www.transladovipexpress.com.br/",
-  "telephone": "+5531972174387",
-  "priceRange": "$$",
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-19.6336",
-    "longitude": "-43.9688"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "72",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Confins",
-    "addressRegion": "MG",
-    "addressCountry": "BR"
-  },
-  "serviceArea": {
-    "@type": "AdministrativeArea",
-    "name": "Minas Gerais"
-  },
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Transfer Confins para Ouro Preto"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Transfer Confins para Inhotim"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Transfer Confins para Diamantina"
-      }
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Como faço uma reserva de táxi credenciado da Translado VIP Express em Confins?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Você pode reservar pelo WhatsApp ou pelo formulário do site. Confirmamos rapidamente com horário, local de embarque e destino."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Vocês atendem transfer para Ouro Preto, Inhotim e Diamantina?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. Operamos rotas executivas para Ouro Preto, Inhotim, Diamantina e outros destinos em Minas Gerais com preço combinado antes da viagem."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "É possível viajar com criança e usar cadeirinha?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. Temos opção de cadeirinha para transporte infantil com segurança. Informe na reserva para prepararmos o veículo correto."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quais formas de pagamento são aceitas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aceitamos dinheiro, cartão e opções digitais. Em viagens corporativas, também oferecemos recibo e atendimento organizado para empresas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Se meu voo atrasar, o motorista aguarda?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. Monitoramos horários de voo para ajustar o atendimento e reduzir transtornos no embarque no Aeroporto de Confins."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Por que escolher táxi credenciado da Translado VIP Express?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "O táxi credenciado da Translado VIP Express oferece mais previsibilidade para aeroporto e viagens com horário: reserva antecipada confirmada, motorista autorizado, possibilidade de uso da pista do MOVE em BH e atendimento profissional focado em pontualidade e segurança."
-      }
-    }
-  ]
-}
-</script>
-    
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Táxi em Confins Aeroporto - Translado Vip Express</title>
+
+  <!-- Preconnect domínios críticos -->
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link rel="preconnect" href="https://code.jquery.com" crossorigin />
+<link rel="dns-prefetch" href="https://translate.google.com" />
+<link rel="dns-prefetch" href="https://images.vexels.com" />
+<link rel="dns-prefetch" href="https://images.emojiterra.com" />
+<link rel="dns-prefetch" href="https://www.google.com" />
+<link rel="dns-prefetch" href="https://api.whatsapp.com" />
+
+  <!-- Preload LCP (imagem do banner) e CSS crítico -->
+<link rel="preload" href="banner.webp" as="image" type="image/webp" fetchpriority="high" />
+<link rel="preload" href="main.css" as="style" />
 
   <!-- Canonical -->
 <link rel="canonical" href="https://www.transladovipexpress.com.br/" />
@@ -960,9 +842,16 @@ function googleTranslateElementInit2() {
     transform: rotate(180deg);
   }
   #faq .faq-answer {
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+  }
+  #faq .faq-answer > p {
+    overflow: hidden;
+  }
+  #faq .faq-question.active + .faq-answer {
+    grid-template-rows: 1fr;
   }
   #faq .faq-answer p {
     margin: 0;
@@ -1002,15 +891,11 @@ function googleTranslateElementInit2() {
         questions.forEach((q) => {
           q.classList.remove('active');
           q.setAttribute('aria-expanded', 'false');
-          const answer = q.nextElementSibling;
-          if (answer) answer.style.maxHeight = null;
         });
 
         if (!isOpen) {
           question.classList.add('active');
           question.setAttribute('aria-expanded', 'true');
-          const answer = question.nextElementSibling;
-          if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
         }
       });
     });
@@ -1095,11 +980,78 @@ function googleTranslateElementInit2() {
   <!-- Rodapé -->
   <footer id="footer" style="background-color: #362929; color: #fff; padding: 2em 0;">
     <div class="inner" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <p style="margin-bottom: 0.8em;">
+        <a href="https://www.instagram.com/transladovipexpress/" target="_blank" rel="noopener" title="Instagram" style="color: #fff; margin: 0 0.5em; font-size: 1.4em;"><span class="fa fa-instagram"></span></a>
+        <a href="https://web.facebook.com/transladovipexpress/" target="_blank" rel="noopener" title="Facebook" style="color: #fff; margin: 0 0.5em; font-size: 1.4em;"><span class="fa fa-facebook"></span></a>
+      </p>
       <p style="margin-bottom: 0.5em;">
         &copy; <strong>Translado Vip Express</strong>. Todos os direitos reservados.
       </p>
     </div>
   </footer>
+
+<!-- Structured Data (não bloqueia renderização) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "@id": "https://www.transladovipexpress.com.br/#business",
+  "name": "Translado Vip Express",
+  "image": "https://www.transladovipexpress.com.br/ouro.webp",
+  "url": "https://www.transladovipexpress.com.br/",
+  "telephone": "+5531972174387",
+  "priceRange": "$$",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-19.6336",
+    "longitude": "-43.9688"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "72",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Confins",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "serviceArea": {
+    "@type": "AdministrativeArea",
+    "name": "Minas Gerais"
+  },
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transfer Confins para Ouro Preto"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transfer Confins para Inhotim"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transfer Confins para Diamantina"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Como faço uma reserva de táxi credenciado da Translado VIP Express em Confins?", "acceptedAnswer": {"@type": "Answer", "text": "Você pode reservar pelo WhatsApp ou pelo formulário do site. Confirmamos rapidamente com horário, local de embarque e destino."}},
+    {"@type": "Question", "name": "Vocês atendem transfer para Ouro Preto, Inhotim e Diamantina?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Operamos rotas executivas para Ouro Preto, Inhotim, Diamantina e outros destinos em Minas Gerais com preço combinado antes da viagem."}},
+    {"@type": "Question", "name": "É possível viajar com criança e usar cadeirinha?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Temos opção de cadeirinha para transporte infantil com segurança. Informe na reserva para prepararmos o veículo correto."}},
+    {"@type": "Question", "name": "Quais formas de pagamento são aceitas?", "acceptedAnswer": {"@type": "Answer", "text": "Aceitamos dinheiro, cartão e opções digitais. Em viagens corporativas, também oferecemos recibo e atendimento organizado para empresas."}},
+    {"@type": "Question", "name": "Se meu voo atrasar, o motorista aguarda?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Monitoramos horários de voo para ajustar o atendimento e reduzir transtornos no embarque no Aeroporto de Confins."}},
+    {"@type": "Question", "name": "Por que escolher táxi credenciado da Translado VIP Express?", "acceptedAnswer": {"@type": "Answer", "text": "O táxi credenciado da Translado VIP Express oferece mais previsibilidade para aeroporto e viagens com horário: reserva antecipada confirmada, motorista autorizado, possibilidade de uso da pista do MOVE em BH e atendimento profissional focado em pontualidade e segurança."}}
+  ]
+}
+</script>
 
 </body>
 </html>
