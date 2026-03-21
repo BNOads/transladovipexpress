@@ -35,6 +35,24 @@
 	<script type="text/javascript">
 
 		function googleTranslateElementInit2() { new google.translate.TranslateElement({ pageLanguage: 'pt', autoDisplay: false }, 'google_translate_element2'); }
+		function doGTranslate(lang_pair) {
+			if (lang_pair.value) lang_pair = lang_pair.value;
+			if (lang_pair == '') return;
+			var lang = lang_pair.split('|')[1];
+			var teCombo = document.getElementsByClassName('goog-te-combo')[0];
+			if (teCombo == null || teCombo.innerHTML == null) {
+				setTimeout(function () { doGTranslate(lang_pair) }, 500);
+			} else {
+				teCombo.value = lang;
+				if (document.createEvent) {
+					var event = document.createEvent('HTMLEvents');
+					event.initEvent('change', true, true);
+					teCombo.dispatchEvent(event);
+				} else {
+					teCombo.fireEvent('onchange');
+				}
+			}
+		}
 
 	</script>
 	<script type="text/javascript"
