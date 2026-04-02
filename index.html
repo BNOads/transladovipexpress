@@ -57,6 +57,31 @@
   <link rel="icon" type="image/webp" href="icone.webp" sizes="32x32" />
   <link rel="apple-touch-icon" href="icone.webp" />
 
+  <!-- Google tag (gtag.js) - Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-860019473"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-860019473');
+  </script>
+
+  <!-- Event snippet for Contato Zap conversion -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-860019473/ZFyNCN_o2NwBEJG2i5oD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
@@ -117,7 +142,7 @@
     }
 
     #banner {
-      box-shadow: inset 0 0 0 2000px rgba(7, 0, 3, 0.50);
+      box-shadow: inset 0 0 0 2000px rgba(7, 0, 3, 0.30);
     }
 
     #one strong,
@@ -230,14 +255,15 @@
   <!-- Banner -->
   <section id="banner">
     <div class="inner">
-      <h1 style="font-size: 2.3em; color: #fff; margin-top: 1em; text-shadow: 2px 2px 2px #1C1C1C; z-index: 1; max-width: 700px; margin-left: auto; margin-right: auto;">
-        Táxi em Confins -<br>Serviço Executivo com Conforto<b style="color: #fff"> e segurança</b>
+      <h1 style="font-size: 2.3em; color: #fff; margin-top: 1em; text-shadow: 2px 2px 2px #1C1C1C; z-index: 1; max-width: 800px; margin-left: auto; margin-right: auto; text-transform: uppercase;">
+        TÁXI EXECUTIVO NO AEROPORTO DE CONFINS COM CONFORTO E <span style="color: #FF8B85;">SEGURANÇA</span>
       </h1>
       <div class="actions">
         <a href="https://api.whatsapp.com/send?phone=5531972174387" id="whatsapp" class="button special"
-          style="background-color: #25D366; border-color: #25D366; color: #fff !important;" rel="noreferrer"
-          target="_blank" title="Garantir minha reserva">
-          <span class="fa fa-whatsapp" style="color: #fff;"></span> Garantir minha reserva
+          style="background-color: #E5464B; border-color: #E5464B; color: #fff !important;" rel="noreferrer"
+          target="_blank" title="Garantir minha reserva"
+          onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5531972174387');">
+          <span class="fa fa-whatsapp" style="color: #25D366;"></span> Orçamento
         </a>
       </div>
     </div>
@@ -246,6 +272,7 @@
   <!-- Botão flutuante WhatsApp -->
   <a href="https://api.whatsapp.com/send?phone=5531972174387" id="whatsapp-float" title="WhatsApp" rel="noreferrer"
     target="_blank"
+    onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5531972174387');"
     style="position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 1px 1px 2px #888; z-index:1000;">
     <i class="fa fa-whatsapp" style="margin-top:16px"></i>
   </a>
@@ -1115,7 +1142,7 @@
           <p>Frota com capacidade para até 6 passageiros.</p>
           <ul class="actions">
             <li><a href="https://api.whatsapp.com/send?phone=5531972174387" target="_blank"
-                class="button alt">Confira</a></li>
+                class="button alt" onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5531972174387');">Confira</a></li>
           </ul>
         </div>
       </article>
