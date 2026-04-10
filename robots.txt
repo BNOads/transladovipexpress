@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://www.transladovipexpress.com.br/sitemap.xml
+
+# LLM Context
+# https://llmstxt.org/
+LLMsTxt: https://www.transladovipexpress.com.br/llms.txt

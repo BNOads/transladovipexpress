@@ -7,6 +7,8 @@
   <title>Táxi no Aeroporto de Confins - Translado Vip Express</title>
 
   <!-- Preconnect domínios críticos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link rel="preconnect" href="https://code.jquery.com" crossorigin />
@@ -24,6 +26,7 @@
   <link rel="canonical" href="https://www.transladovipexpress.com.br/" />
   <link rel="sitemap" type="application/xml" title="Sitemap"
     href="https://www.transladovipexpress.com.br/sitemap.xml" />
+  <link rel="help" type="text/plain" title="LLMs Context" href="https://www.transladovipexpress.com.br/llms.txt" />
 
   <!-- SEO -->
   <meta name="description"
@@ -102,6 +105,14 @@
     as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <!-- Pacifico (logo header) - bloqueante pois é acima da dobra -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" />
+  <!-- Lato (corpo) - não-bloqueante pois fallback sans-serif é similar -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" />
   </noscript>
 
   <!-- CSS principal -->
@@ -281,7 +292,7 @@
   <section id="one">
     <div class="inner">
       <div
-        style="background: linear-gradient(135deg, #fff8f8 0%, #fff 100%); border: 1px solid #ffd6d5; border-radius: 14px; padding: 1.2rem; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(54,41,41,0.08);">
+        style="background: linear-gradient(135deg, #fff8f8 0%, #fff 100%); border: 1px solid #ffd6d5; border-radius: 14px; padding: 1.5rem 2rem; margin-bottom: 1.5rem; margin-left: -3em; margin-right: -3em; box-shadow: 0 8px 24px rgba(54,41,41,0.08);">
         <h2 style="margin: 0 0 0.6rem; color: #362929; font-size: 1.35rem; line-height: 1.35;">
           Por que escolher o táxi credenciado da Translado VIP Express?
         </h2>
@@ -290,17 +301,23 @@
             Express</strong>, você tem atendimento planejado para <strong>chegar no horário com segurança e
             previsibilidade</strong>.
         </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.7rem;">
+        <div class="badge-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.7rem;">
           <div style="background: #fff; border: 1px solid #f1d5d4; border-radius: 10px; padding: 0.75rem;">
             <strong style="display:block; color:#000; margin-bottom:0.2rem;"><span class="fa fa-calendar-check-o"
                 style="color:#e32227; margin-right:0.35rem;" aria-hidden="true"></span>Reserva antecipada
               garantida</strong>
             <span style="color:#4a4a4a;">Seu atendimento fica confirmado antes da viagem.</span>
+            <span style="display:block; margin-top:0.35rem; color:#1a5fa8; font-size:0.85rem; font-weight:700;">
+              <span class="fa fa-plane" aria-hidden="true"></span> Monitoramento de voo em tempo real
+            </span>
           </div>
           <div style="background: #fff; border: 1px solid #f1d5d4; border-radius: 10px; padding: 0.75rem;">
             <strong style="display:block; color:#000; margin-bottom:0.2rem;"><span class="fa fa-road"
                 style="color:#e32227; margin-right:0.35rem;" aria-hidden="true"></span>Mais agilidade em BH</strong>
             <span style="color:#4a4a4a;">Uso da pista do MOVE em trechos permitidos para reduzir atrasos.</span>
+            <span style="display:block; margin-top:0.35rem; color:#1a7a1a; font-size:0.85rem; font-weight:700;">
+              <span class="fa fa-clock-o" aria-hidden="true"></span> -50% no tempo de trajeto em Belo Horizonte
+            </span>
           </div>
           <div style="background: #fff; border: 1px solid #f1d5d4; border-radius: 10px; padding: 0.75rem;">
             <strong style="display:block; color:#000; margin-bottom:0.2rem;"><span class="fa fa-shield"
@@ -319,12 +336,12 @@
           height="866"></span>
       <p style="text-align: justify;">
         Com mais de <strong>20 anos de experiência</strong> com <strong><a href="https://www.transladovipexpress.com.br"
-            target="_blank" rel="noreferrer">Táxi em Confins</a></strong>, a <strong><a
+            target="_blank" rel="noreferrer">Táxi em Confins <span class="fa fa-external-link" style="font-size:0.75em;"></span></a></strong>, a <strong><a
             href="https://www.transladovipexpress.com.br" target="_blank" rel="noreferrer">Translado Vip
-            Express</a></strong> vem se consolidando no mercado com uma cartela de viajantes satisfeitos, oferecendo
+            Express <span class="fa fa-external-link" style="font-size:0.75em;"></span></a></strong> vem se consolidando no mercado com uma cartela de viajantes satisfeitos, oferecendo
         serviço de qualidade. Atuamos com <strong><a href="transfer-confins-ouro-preto.html">Transfer de Confins para
-            Ouro Preto</a></strong>, <strong><a href="transfer-confins-inhotim.html">Transfer para Inhotim</a></strong>
-        e <strong><a href="transfer-confins-diamantina.html">Transfer para Diamantina</a></strong>.
+            Ouro Preto <span class="fa fa-external-link" style="font-size:0.75em;"></span></a></strong>, <strong><a href="transfer-confins-inhotim.html">Transfer para Inhotim <span class="fa fa-external-link" style="font-size:0.75em;"></span></a></strong>
+        e <strong><a href="transfer-confins-diamantina.html">Transfer para Diamantina <span class="fa fa-external-link" style="font-size:0.75em;"></span></a></strong>.
       </p>
       <span class="image right"><img loading="lazy" src="pet.webp" alt="Transporte de pets Confins" width="586"
           height="420"></span>
@@ -334,17 +351,19 @@
         amigo.
         <br>
         Consulte condições especiais para <a href="https://www.transladovipexpress.com.br" target="_blank"
-          rel="noreferrer">Transporte de Pets no Aeroporto de Confins</a>.
+          rel="noreferrer">Transporte de Pets no Aeroporto de Confins <span class="fa fa-external-link" style="font-size:0.75em;"></span></a>.
       </p>
       <span class="image left"><img loading="lazy" src="spin.webp" alt="Táxi Executivo Confins" width="620"
           height="310"></span>
       <p style="text-align: justify;">
-        Evoluímos de táxi comum para <strong>Táxi Executivo</strong>, agora com opção para 6 passageiros. Também
-        oferecemos <strong>Táxi com Cadeirinha</strong>, garantindo segurança para crianças por um <strong>pequeno custo
-          adicional</strong>.
-        <br>
-        Consulte <a href="https://www.bh-airport.com.br/br/p/4/voos.aspx" target="_blank" rel="noopener">horários de
-          voos</a> e entre em contato: <strong>(31) 9 7217-4387</strong>.
+        Oferecemos serviço de <strong>Táxi Executivo</strong> com alto padrão de conforto, segurança e pontualidade. Contamos com veículos espaçosos com capacidade para até 6 passageiros, ideais para famílias, grupos e traslados para aeroportos.
+        <br><br>
+        Também disponibilizamos <strong>Táxi com Cadeirinha</strong> para crianças, garantindo mais segurança e tranquilidade durante todo o trajeto.
+        <br><br>
+        Nosso compromisso é entregar um transporte confiável, confortável e profissional, atendendo às necessidades de cada cliente com excelência.
+        <br><br>
+        Consulte <a href="https://www.bh-airport.com.br/pt-BR/find-your-flight" target="_blank" rel="noopener">horários de
+          voos <span class="fa fa-external-link" style="font-size:0.75em;"></span></a> e entre em contato: <strong>(31) 9 7217-4387</strong>.
       </p>
     </div>
   </section>
@@ -369,9 +388,9 @@
             <span style="font-size: 1.1rem; color: #666;">Avaliações</span>
           </div>
           <div style="display: flex; align-items: center; gap: 0.3rem;">
-            <span style="font-size: 1.5rem; font-weight: 700; color: #362929;">4,7</span>
+            <span style="font-size: 1.5rem; font-weight: 700; color: #362929;">4,9</span>
             <div style="color: #fbbc04; font-size: 1.2rem;">★★★★★</div>
-            <span style="color: #666; font-size: 0.9rem;">(72 avaliações)</span>
+            <span style="color: #666; font-size: 0.9rem;">(90 avaliações)</span>
           </div>
         </div>
       </div>
@@ -761,8 +780,8 @@
 
       let currentIndex = 0;
       let cardWidth = 350 + 24; // card width + gap
-      let visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth) || 1;
-      let maxIndex = Math.max(0, cards.length - visibleCards);
+      let visibleCards = 1;
+      let maxIndex = Math.max(0, cards.length - 1);
       let autoPlayInterval;
 
       // Criar dots
@@ -857,10 +876,12 @@
       track.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
       track.addEventListener('mouseleave', startAutoPlay);
 
-      // Inicializar
+      // Inicializar (defer layout read para evitar reflow forçado)
       window.addEventListener('resize', handleResize);
-      handleResize();
-      startAutoPlay();
+      requestAnimationFrame(function() {
+        handleResize();
+        startAutoPlay();
+      });
     })();
   </script>
 
@@ -1097,6 +1118,32 @@
       #one .image.right img {
         width: 100%;
       }
+
+      /* Badge segunda dobra: largura total no mobile */
+      #one .inner > div:first-child {
+        margin-left: -1.5em !important;
+        margin-right: -1.5em !important;
+        border-radius: 0 !important;
+        padding: 1.2rem 1rem !important;
+      }
+
+      /* Cards 2 por linha no mobile */
+      .badge-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+      }
+
+      .badge-cards-grid > div {
+        padding: 0.6rem !important;
+      }
+
+      .badge-cards-grid > div strong {
+        font-size: 0.85rem !important;
+      }
+
+      .badge-cards-grid > div span {
+        font-size: 0.8rem !important;
+      }
     }
   </style>
 
@@ -1112,7 +1159,7 @@
             alt="Táxi com Cadeirinha para crianças" width="480" height="491" style="border-radius: 10px;" />
         </div>
         <p style="margin-top: 1em; color: #444; line-height: 1.7;">
-          Sabemos que viajar com bebê ou criança pequena é desafiador, por isso, oferecemos cadeirinha infantil com reserva antecipada. O carro chega até você na saída do terminal, com espaço de sobra para malas e carrinho. Você não precisa ficar em pé na calçada esperando com criança no colo.<br><br>
+          Sabemos que viajar com bebê ou criança pequena é desafiador, por isso, oferecemos <strong>cadeirinha infantil</strong> com <strong>reserva antecipada</strong>. O carro chega até você na <strong>saída do terminal</strong>, com espaço de sobra para <strong>malas e carrinho</strong>. Você não precisa ficar em pé na calçada esperando com criança no colo.<br><br>
           <strong>Reserve com antecedência e informe a idade da criança. A gente cuida do restante.</strong>
         </p>
       </article>
@@ -1124,7 +1171,7 @@
           <img src="empresario.webp" alt="Táxi executivo para empresários e advogados em Confins" title="Táxi Executivo - Translado Vip Express" loading="lazy" width="620" height="413" style="border-radius: 10px;" />
         </div>
         <p style="margin-top: 1em; color: #444; line-height: 1.7;">
-          Nosso táxi executivo é o padrão escolhido por advogados, executivos e empresários que precisam de pontualidade, discrição e comodidade. Aceitamos cartão corporativo, emitimos recibo e nota fiscal para reembolso de despesas. A viagem começa no momento em que você fecha a porta — de forma silenciosa, confortável, sem preocupações.
+          Nosso <strong>táxi executivo</strong> é o padrão escolhido por <strong>advogados, executivos e empresários</strong> que precisam de <strong>pontualidade, discrição e comodidade</strong>. Aceitamos <strong>cartão corporativo</strong>, emitimos <strong>recibo e nota fiscal</strong> para reembolso de despesas. A viagem começa no momento em que você fecha a porta — de forma silenciosa, confortável, sem preocupações.
         </p>
       </article>
     </div>
@@ -1139,7 +1186,7 @@
           <header>
             <h3>Veículos Utilitários</h3>
           </header>
-          <p>Frota com capacidade para até 6 passageiros.</p>
+          <p>Frota com capacidade para <strong>até 6 passageiros</strong>.</p>
           <ul class="actions">
             <li><a href="https://api.whatsapp.com/send?phone=5531972174387" target="_blank"
                 class="button alt" onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5531972174387');">Confira</a></li>
@@ -1152,7 +1199,7 @@
           <header>
             <h3>Motoristas Bem Treinados</h3>
           </header>
-          <p>Condutores capacitados e atenciosos, priorizando conforto e segurança.</p>
+          <p>Condutores <strong>capacitados e atenciosos</strong>, priorizando <strong>conforto e segurança</strong>.</p>
           <ul class="actions">
             <li><a href="https://api.whatsapp.com/send?phone=5531972174387" target="_blank"
                 class="button alt">Confira</a></li>
@@ -1165,7 +1212,7 @@
           <header>
             <h3>Várias Formas de Pagamento</h3>
           </header>
-          <p>Aceitamos cartões de crédito e parcelamento. Também operamos com plataformas digitais legalizadas.</p>
+          <p>Aceitamos <strong>cartões de crédito</strong> e <strong>parcelamento</strong>. Também operamos com <strong>plataformas digitais legalizadas</strong>.</p>
           <ul class="actions">
             <li><a href="https://api.whatsapp.com/send?phone=5531972174387" target="_blank"
                 class="button alt">Confira</a></li>
@@ -1216,8 +1263,8 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "72",
+    "ratingValue": "4.9",
+    "reviewCount": "90",
     "bestRating": "5",
     "worstRating": "1"
   },

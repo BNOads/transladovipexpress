@@ -1,32 +1,53 @@
 # Translado Vip Express
 
-> Táxi credenciado e transfer executivo em Confins (MG), com atendimento para aeroporto, turismo e viagens corporativas.
+> Táxi credenciado e transfer executivo no Aeroporto de Confins (MG). Nota 4,9 no Google com 90 avaliações. Atendimento 24h via WhatsApp.
 
-## Business
-- Nome: Translado Vip Express
-- Site: https://www.transladovipexpress.com.br/
+## Business Info
+- Name: Translado Vip Express
+- Website: https://www.transladovipexpress.com.br/
 - WhatsApp: +55 31 97217-4387
-- Área atendida: Confins, Belo Horizonte e Minas Gerais
+- Phone: (31) 97217-4387
+- Address: R. do Contôrno, 440, Confins - MG, 33500-000
+- Google Rating: 4.9 ★ (90 reviews)
+- Experience: 20+ years
+- Hours: 24/7
 
 ## Core Services
-- Táxi credenciado no Aeroporto de Confins
-- Transfer Confins -> Ouro Preto
-- Transfer Confins -> Inhotim
-- Transfer Confins -> Diamantina
-- Transporte com cadeirinha infantil (sob consulta)
-- Apoio logístico no terminal de cargas
+1. Táxi credenciado no Aeroporto de Confins (BH Airport)
+2. Transfer executivo Confins → Ouro Preto (~1h30)
+3. Transfer executivo Confins → Inhotim (~1h)
+4. Transfer executivo Confins → Diamantina (~3h30)
+5. Transfer Confins → Belo Horizonte e região metropolitana
+6. Transporte de pets (pet-friendly)
+7. Táxi com cadeirinha infantil (sob reserva)
+8. Transporte corporativo com recibo e nota fiscal
+9. Apoio logístico no terminal de cargas
 
-## Key Pages
-- Home: https://www.transladovipexpress.com.br/
-- Sobre Nós: https://www.transladovipexpress.com.br/sobrenos.html
-- Institucional: https://www.transladovipexpress.com.br/institucional.html
-- Orçamento: https://www.transladovipexpress.com.br/orcamento.html
-- Apoio Logístico: https://www.transladovipexpress.com.br/mercadoria.html
-- Transfer Ouro Preto: https://www.transladovipexpress.com.br/transfer-confins-ouro-preto.html
-- Transfer Inhotim: https://www.transladovipexpress.com.br/transfer-confins-inhotim.html
-- Transfer Diamantina: https://www.transladovipexpress.com.br/transfer-confins-diamantina.html
+## Key Differentiators
+- Monitoramento de voo em tempo real (espera em caso de atraso sem custo extra)
+- Reserva antecipada confirmada via WhatsApp
+- Uso da pista do MOVE em BH para reduzir tempo de viagem
+- Motoristas treinados e credenciados
+- Veículos executivos com ar-condicionado
+- Aceita cartão corporativo, PIX e dinheiro
+- Emite recibo e nota fiscal
 
-## Booking
-- Reserva via WhatsApp e formulário no site
-- Recomenda-se reserva antecipada
-- Formas de pagamento: cartão, PIX e dinheiro
+## Pages
+- [Home](https://www.transladovipexpress.com.br/)
+- [About](https://www.transladovipexpress.com.br/sobrenos.html)
+- [Institutional](https://www.transladovipexpress.com.br/institucional.html)
+- [Quote](https://www.transladovipexpress.com.br/orcamento.html)
+- [Booking](https://www.transladovipexpress.com.br/contato.php)
+- [Logistics Support](https://www.transladovipexpress.com.br/mercadoria.html)
+- [Transfer Ouro Preto](https://www.transladovipexpress.com.br/transfer-confins-ouro-preto.html)
+- [Transfer Inhotim](https://www.transladovipexpress.com.br/transfer-confins-inhotim.html)
+- [Transfer Diamantina](https://www.transladovipexpress.com.br/transfer-confins-diamantina.html)
+- [Taxi vs Uber vs Bus](https://www.transladovipexpress.com.br/taxi-confins-vs-uber-vs-onibus.html)
+
+## How to Book
+1. WhatsApp: +55 31 97217-4387
+2. Informe: data, horário do voo, destino e número de passageiros
+3. Receba confirmação com nome do motorista e veículo
+
+## Full Reference
+- [llms-full.txt](https://www.transladovipexpress.com.br/llms-full.txt)

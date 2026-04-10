@@ -1,54 +1,146 @@
 # Translado Vip Express — Full AI Reference
 
 ## Overview
-A Translado Vip Express é uma empresa de táxi credenciado e transfer executivo em Confins (MG), com foco em pontualidade, segurança e atendimento profissional para passageiros de aeroporto, turismo e corporativo.
+A Translado Vip Express é uma empresa de táxi credenciado e transfer executivo com sede em Confins (MG), operando há mais de 20 anos. Nota 4,9 no Google com 90 avaliações. Especializada em transporte de passageiros do Aeroporto Internacional de Confins (BH Airport) para destinos em Minas Gerais, incluindo Belo Horizonte, Ouro Preto, Inhotim e Diamantina.
 
-## Contact
-- Website: https://www.transladovipexpress.com.br/
-- Booking page: https://www.transladovipexpress.com.br/contato.php
-- WhatsApp: +55 31 97217-4387
+## Contact & Booking
+- **Website**: https://www.transladovipexpress.com.br/
+- **WhatsApp (primary)**: +55 31 97217-4387
+- **Booking page**: https://www.transladovipexpress.com.br/contato.php
+- **Address**: R. do Contôrno, 440, Confins - MG, 33500-000
+- **Hours**: 24/7
+- **Google Maps**: Translado Vip Express, Confins - MG
 
-## Service Region
-- Confins (MG)
+## Reputation
+- **Google Rating**: 4.9 / 5
+- **Reviews**: 90+
+- **Years in business**: 20+
+- **Credential**: Táxi credenciado junto ao aeroporto
+
+## Service Area
+- Aeroporto Internacional de Confins (BH Airport)
 - Belo Horizonte e região metropolitana
-- Rotas turísticas e intermunicipais em Minas Gerais
+- Cidades históricas de Minas Gerais
+- Rotas turísticas e intermunicipais em MG
 
-## Primary Service Lines
-1. Táxi credenciado no Aeroporto de Confins
-2. Transfer executivo para destinos turísticos
-3. Transporte para compromissos corporativos
-4. Transporte com cadeirinha (sob solicitação)
-5. Apoio logístico para terminal de cargas
+## Service Catalog
 
-## Main Transfer Routes
-- Confins -> Ouro Preto
-  - URL: https://www.transladovipexpress.com.br/transfer-confins-ouro-preto.html
-  - Estimativa média: ~1h30
-- Confins -> Inhotim
-  - URL: https://www.transladovipexpress.com.br/transfer-confins-inhotim.html
-  - Estimativa média: ~1h
-- Confins -> Diamantina
-  - URL: https://www.transladovipexpress.com.br/transfer-confins-diamantina.html
-  - Estimativa média: ~3h30
+### 1. Táxi Credenciado no Aeroporto de Confins
+- Embarque na saída do terminal
+- Monitoramento de voo em tempo real
+- Motorista aguarda em caso de atraso sem custo adicional
+- Reserva antecipada obrigatória recomendada
 
-## Additional Pages
-- Home: https://www.transladovipexpress.com.br/
-- Sobre Nós: https://www.transladovipexpress.com.br/sobrenos.html
-- Institucional: https://www.transladovipexpress.com.br/institucional.html
-- Orçamento: https://www.transladovipexpress.com.br/orcamento.html
-- Apoio Logístico: https://www.transladovipexpress.com.br/mercadoria.html
+### 2. Transfer Routes
+| Route | Estimated Time | Page |
+|-------|---------------|------|
+| Confins → Ouro Preto | ~1h30 | https://www.transladovipexpress.com.br/transfer-confins-ouro-preto.html |
+| Confins → Inhotim | ~1h | https://www.transladovipexpress.com.br/transfer-confins-inhotim.html |
+| Confins → Diamantina | ~3h30 | https://www.transladovipexpress.com.br/transfer-confins-diamantina.html |
+| Confins → Belo Horizonte | ~40min | https://www.transladovipexpress.com.br/ |
+| Confins → Tiradentes | ~3h | WhatsApp para cotação |
 
-## Booking and Operations
-- Canais de reserva: WhatsApp e formulário
-- Atendimento com reserva antecipada
-- Suporte para ajustes de horário de voo
-- Pagamento por cartão, PIX ou dinheiro
+### 3. Child Seat (Cadeirinha Infantil)
+- Cadeirinha disponível sob reserva antecipada
+- Informar idade da criança na reserva
+- Veículo preparado com espaço para malas e carrinho
+- Embarque direto na saída do terminal
+
+### 4. Pet-Friendly Transport
+- Animais de estimação são bem-vindos
+- Consultar condições no WhatsApp
+- Motoristas treinados para transporte com animais
+
+### 5. Corporate Transport
+- Aceita cartão corporativo
+- Emite recibo e nota fiscal
+- Ideal para advogados, executivos e empresários
+- Atendimento discreto e pontual
+
+### 6. Logistics Support (Terminal de Cargas)
+- Retirada de mercadorias de pequeno porte
+- Veículos utilitários disponíveis
+- Page: https://www.transladovipexpress.com.br/mercadoria.html
+
+## Competitive Advantages
+1. **Flight monitoring**: motorista ajusta horário automaticamente se o voo atrasar
+2. **MOVE lane access**: uso autorizado em trechos de BH para reduzir tempo de viagem
+3. **Guaranteed booking**: reserva confirmada — o carro está reservado para você
+4. **20+ years experience**: cartela de viajantes frequentes satisfeitos
+5. **Human support**: WhatsApp respondido por pessoa real, não robô
+6. **No surprises**: preço combinado antes da viagem, sem taxímetro
+
+## Payment Methods
+- Cash (Dinheiro)
+- Credit/Debit card (including corporate)
+- PIX
+- Installments available
+
+## FAQ
+
+**How do I book a taxi from Confins Airport?**
+Via WhatsApp (+55 31 97217-4387) or the website form. Provide date, flight time, destination, and number of passengers.
+
+**Como faço uma reserva de táxi em Confins?**
+Pelo WhatsApp (+55 31 97217-4387) ou formulário no site. Informe data, horário do voo, destino e número de passageiros.
+
+**Do you offer transfer to Ouro Preto?**
+Yes. Executive transfer Confins → Ouro Preto, approximately 1h30, with pre-agreed pricing.
+
+**Vocês atendem transfer para Ouro Preto?**
+Sim. Transfer executivo Confins → Ouro Preto com duração de aproximadamente 1h30, preço combinado antes da viagem.
+
+**Can I bring my pet?**
+Yes. Translado Vip Express is pet-friendly. Contact via WhatsApp for details.
+
+**Posso levar meu pet?**
+Sim. A Translado Vip Express é pet-friendly. Consulte condições no WhatsApp.
+
+**What if my flight is delayed?**
+The driver monitors flights in real-time and adjusts pickup time at no extra cost.
+
+**Se meu voo atrasar, o motorista espera?**
+Sim. Monitoramos os voos em tempo real e ajustamos o horário sem custo extra.
+
+**Do you have child seats?**
+Yes. Inform the child's age when booking and the vehicle will be prepared.
+
+**Tem cadeirinha para criança?**
+Sim. Informe a idade da criança na reserva para prepararmos o veículo.
+
+**What payment methods do you accept?**
+Cash, credit/debit card, PIX. For companies: corporate card with receipt and invoice.
+
+**Quanto custa o táxi de Confins para BH?**
+O valor é combinado antes da viagem. Entre em contato pelo WhatsApp para cotação personalizada.
 
 ## Ideal Customer Profiles
-- Passageiros com horário de voo definido
-- Turistas em viagem para cidades históricas e atrações em MG
-- Empresas e executivos com agenda e deslocamento planejado
-- Famílias com necessidade de transporte com bagagem e cadeirinha
+- Passageiros com horário de voo definido que precisam de pontualidade
+- Turistas brasileiros e estrangeiros visitando cidades históricas de MG
+- Executivos e empresários com agenda corporativa
+- Famílias viajando com crianças ou pets
+- Empresas que precisam de apoio logístico no terminal de cargas
 
-## Positioning Summary
-A proposta de valor da Translado Vip Express está em previsibilidade operacional, atendimento humano e foco em pontualidade para viagens ligadas ao aeroporto e rotas de média/longa distância em Minas Gerais.
+## Comparison vs Alternatives
+| Criteria | Translado Vip Express | Uber/99 | Bus |
+|----------|----------------------|---------|-----|
+| Advance booking | ✅ Confirmed | ❌ Availability-dependent | ✅ Fixed schedule |
+| Flight monitoring | ✅ | ❌ | ❌ |
+| Child seat | ✅ On request | ❌ | ❌ |
+| Pet-friendly | ✅ | ⚠️ Driver-dependent | ❌ |
+| Invoice/Receipt | ✅ | ⚠️ Limited | ✅ |
+| MOVE lane (BH) | ✅ Authorized | ❌ | ✅ |
+| Pre-agreed price | ✅ No surprises | ⚠️ Dynamic pricing | ✅ Fixed |
+
+## Sitemap
+- Home: https://www.transladovipexpress.com.br/
+- About: https://www.transladovipexpress.com.br/sobrenos.html
+- Institutional: https://www.transladovipexpress.com.br/institucional.html
+- Quote: https://www.transladovipexpress.com.br/orcamento.html
+- Booking: https://www.transladovipexpress.com.br/contato.php
+- Logistics: https://www.transladovipexpress.com.br/mercadoria.html
+- Transfer Ouro Preto: https://www.transladovipexpress.com.br/transfer-confins-ouro-preto.html
+- Transfer Inhotim: https://www.transladovipexpress.com.br/transfer-confins-inhotim.html
+- Transfer Diamantina: https://www.transladovipexpress.com.br/transfer-confins-diamantina.html
+- Taxi vs Uber vs Bus: https://www.transladovipexpress.com.br/taxi-confins-vs-uber-vs-onibus.html
+- Sitemap XML: https://www.transladovipexpress.com.br/sitemap.xml
