@@ -8,11 +8,12 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-	<link rel="shortcut icon" href="icone.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="icone.webp" type="image/webp" />
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" />
 	<link rel="stylesheet" href="main.css" />
 
 	<link rel=”canonical” href=”www.transladovipexpress.com.br/contato.php” />

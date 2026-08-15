@@ -36,8 +36,9 @@ $zipreserva = $reserva1.$city.$reserva2;
 		<meta charset="utf-8" />
 		<link rel=”canonical” href=”www.transladovipexpress.com.br/orcamento.php” />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" />
 		<link rel="stylesheet" href="main.css" />
-		<link rel="shortcut icon" href="icone.webp" type="image/x-icon"/>	
+		<link rel="shortcut icon" href="icone.webp" type="image/webp"/>	
 		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-wX/yv3XrMHL9ho8i2z4rFw6B6cKKtxFiBuB2S+CRlmw=" crossorigin="anonymous"/>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

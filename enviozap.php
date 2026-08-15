@@ -100,7 +100,7 @@ $email_conteudo .= "*Detalhamento da corrida*: $mensagem %0A%0A";
 		href="https://cdnjs.cloudflare.com/ajax/libs/jquery-flexdatalist/2.3.0/jquery.flexdatalist.min.css"
 		integrity="sha512-feX1WY95JHQ//uffCG42xy0PofA6DAZSEgIQMMOmRBbSmmOoz/J52azXXLM3kYa9EkQ5PlOHFFCgqpnPJ1oYpg=="
 		crossorigin="anonymous" />
-	<link rel="shortcut icon" href="icon2.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="icone.webp" type="image/webp" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css"
 		integrity="sha256-wX/yv3XrMHL9ho8i2z4rFw6B6cKKtxFiBuB2S+CRlmw=" crossorigin="anonymous" />
 	<link rel="manifest" href="manifest/manifest.json">
