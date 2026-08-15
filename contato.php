@@ -274,6 +274,20 @@
 			color: #a0302a;
 		}
 
+		/* Remove a bolinha/quadradinho herdada do main.css */
+		.radio-group input[type="radio"]+label:before,
+		.radio-group input[type="radio"]:checked+label:before {
+			content: none !important;
+			display: none !important;
+		}
+
+		.radio-group input[type="radio"]+label {
+			display: inline-flex;
+			padding: 0 14px;
+			font-size: 1rem;
+			font-weight: 600;
+		}
+
 		/* -- Botão enviar -- */
 		.btn-submit {
 			display: block;
