@@ -2,7 +2,7 @@
 
 <head>
 
-	<title>Formulario</title>
+	<title>Solicite seu Orçamento | Translado Vip Express</title>
 
 	<meta charset="utf-8" />
 
@@ -390,7 +390,7 @@
 
 			<div class="form-card">
 
-				<h1>✈️ Formulário de Reserva</h1>
+				<h1>✈️ Solicite seu Orçamento</h1>
 
 				<form action="enviozap.php" name="formulario" method="GET">
 
@@ -417,7 +417,7 @@
 
 						<!-- Data e hora (largura total) -->
 						<div class="form-field full-width">
-							<label for="date">📅 Data e horário da reserva</label>
+							<label for="date">📅 Data e horário da viagem</label>
 							<input type="datetime-local" id="date" name="data" />
 						</div>
 					</div>
@@ -496,7 +496,7 @@
 							placeholder="Informe número do voo, observações especiais, etc." rows="4"></textarea>
 					</div>
 
-					<input type="submit" name="BTEnvia" value="Enviar Reserva" class="btn-submit" />
+					<input type="submit" name="BTEnvia" value="Pedir Orçamento" class="btn-submit" />
 
 				</form>
 
