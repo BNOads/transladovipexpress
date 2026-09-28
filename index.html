@@ -175,6 +175,11 @@
     }
   </script>
   <style>
+    /* clique no icone conta como clique no botao (acionador ZapId do GTM) */
+    a[id^="whatsapp"] * {
+      pointer-events: none;
+    }
+
     #mobile-lang {
       display: none;
     }
@@ -299,8 +304,7 @@
       <div class="actions">
         <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" id="whatsapp" class="button special"
           style="background-color: #E5464B; border-color: #E5464B; color: #fff !important;" rel="noreferrer"
-          target="_blank" title="Garantir minha reserva"
-          onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A');">
+          target="_blank" title="Garantir minha reserva">
           <span class="fa fa-whatsapp" style="color: #25D366;"></span> Orçamento
         </a>
       </div>
@@ -313,7 +317,6 @@
   <!-- Botão flutuante WhatsApp -->
   <a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" id="whatsapp-float" title="WhatsApp" rel="noreferrer"
     target="_blank"
-    onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A');"
     style="position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 1px 1px 2px #888; z-index:1000;">
     <i class="fa fa-whatsapp" style="margin-top:16px"></i>
   </a>
@@ -1229,8 +1232,8 @@
           </header>
           <p>Frota com capacidade para <strong>até 6 passageiros</strong>.</p>
           <ul class="actions">
-            <li><a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" target="_blank"
-                class="button alt" onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A');">Confira</a></li>
+            <li><a id="whatsapp-confira-1" href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" target="_blank"
+                class="button alt">Confira</a></li>
           </ul>
         </div>
       </article>
@@ -1242,7 +1245,7 @@
           </header>
           <p>Condutores <strong>capacitados e atenciosos</strong>, priorizando <strong>conforto e segurança</strong>.</p>
           <ul class="actions">
-            <li><a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" target="_blank"
+            <li><a id="whatsapp-confira-2" href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" target="_blank"
                 class="button alt">Confira</a></li>
           </ul>
         </div>
@@ -1255,7 +1258,7 @@
           </header>
           <p>Aceitamos <strong>cartões de crédito</strong> e <strong>parcelamento</strong>. Também operamos com <strong>plataformas digitais legalizadas</strong>.</p>
           <ul class="actions">
-            <li><a href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" target="_blank"
+            <li><a id="whatsapp-confira-3" href="https://api.whatsapp.com/send?phone=5531972174387&text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20mais%20detalhes%20de%20or%C3%A7amento%20para%20o%20destino%3A" target="_blank"
                 class="button alt">Confira</a></li>
           </ul>
         </div>
@@ -1350,7 +1353,6 @@
       for (var i = 0; i < links.length; i++) {
         var base = links[i].href.replace(/&text=[^&]*/, '');
         links[i].href = base + '&text=' + encodeURIComponent(r.whatsapp);
-        links[i].onclick = function () { return gtag_report_conversion(this.href); };
       }
     })();
   </script>
