@@ -4,6 +4,10 @@
   RewriteCond %{HTTPS} !=on
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
+  # Paginas fundidas: comparativo de transporte agora vive em alternativas-transporte-confins.html
+  RewriteRule ^taxi-confins-vs-uber-vs-onibus\.html$ /alternativas-transporte-confins.html [R=301,L]
+  RewriteRule ^taxi-confins-vs-uber-vs-onibus/?$ /alternativas-transporte-confins.html [R=301,L]
+
   # URLs sem .html (ex.: /taxi-confins serve taxi-confins.html)
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.html -f
