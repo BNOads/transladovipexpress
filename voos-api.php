@@ -26,6 +26,15 @@ if (!is_dir($dirCache)) { @mkdir($dirCache, 0775, true); }
 if (!is_dir($dirCache) || !is_writable($dirCache)) { $dirCache = sys_get_temp_dir(); }
 $arquivo = $dirCache . '/voos-' . $tipo . '.json';
 
+/** Nome da companhia -> nome do arquivo da logo em logos-cia/ */
+function slugCia($nome) {
+    $t = mb_strtolower(trim($nome), 'UTF-8');
+    $t = strtr($t, array('á'=>'a','à'=>'a','ã'=>'a','â'=>'a','é'=>'e','ê'=>'e',
+                         'í'=>'i','ó'=>'o','ô'=>'o','õ'=>'o','ú'=>'u','ç'=>'c'));
+    $t = preg_replace('/[^a-z0-9]+/', '-', $t);
+    return trim($t, '-');
+}
+
 function responde($dados, $origem, $quando) {
     echo json_encode(array(
         'ok'          => true,
@@ -85,8 +94,10 @@ if (is_array($dados)) {
     foreach ($dados as $v) {
         $quando = isset($v['scheduledUnformated']) ? strtotime($v['scheduledUnformated']) : null;
         if ($quando && ($quando > $limite || $quando < $piso)) { continue; }
+        $nomeCia = isset($v['companyName']) ? $v['companyName'] : '';
         $lista[] = array(
-            'cia'      => isset($v['companyName']) ? $v['companyName'] : '',
+            'cia'      => $nomeCia,
+            'slug'     => slugCia($nomeCia),
             'voo'      => isset($v['flight']) ? $v['flight'] : '',
             'ponta'    => isset($v['origin']) ? $v['origin'] : (isset($v['destination']) ? $v['destination'] : ''),
             'previsto' => isset($v['scheduled']) ? $v['scheduled'] : '',

@@ -649,18 +649,30 @@ details[open] .a{animation:panelIn .3s ease}
 .pn-toggle{display:flex;background:var(--mist);border-radius:999px;padding:3px;flex:none}
 .pn-toggle button{border:0;background:none;font:inherit;font-size:.82rem;font-weight:750;padding:7px 14px;border-radius:999px;cursor:pointer;color:var(--ink-2)}
 .pn-toggle button.on{background:var(--ink);color:#fff}
-.pn-busca{display:flex;align-items:center;gap:10px;margin:0 24px 14px;background:var(--mist);border:1px solid var(--line);border-radius:999px;padding:0 18px}
-.pn-busca .ic{width:17px;height:17px;color:var(--yellow-deep);flex:none}
-.pn-busca input{border:0;background:none;font:inherit;font-size:.95rem;padding:13px 0;width:100%;outline:none;color:var(--ink)}
+.pn-busca-area{padding:0 24px 16px}
+.pn-busca{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:0 20px;box-shadow:0 4px 0 var(--yellow);transition:box-shadow .15s, transform .15s}
+.pn-busca:focus-within{box-shadow:0 6px 0 var(--yellow);transform:translateY(-1px)}
+.pn-busca .ic{width:19px;height:19px;color:var(--ink);flex:none}
+.pn-busca input{border:0;background:none;font:inherit;font-size:1.02rem;font-weight:600;padding:15px 0;width:100%;outline:none;color:var(--ink)}
+.pn-busca input::placeholder{color:#9A958C;font-weight:400}
+.pn-busca input::-webkit-search-cancel-button{display:none}
+.pn-limpar{border:0;background:var(--mist);color:var(--ink-2);font-size:1.15rem;line-height:1;width:26px;height:26px;border-radius:50%;cursor:pointer;flex:none}
+.pn-chips{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.pn-chips button{border:1px solid var(--line);background:#fff;font:inherit;font-size:.8rem;font-weight:700;color:var(--ink-2);padding:6px 13px;border-radius:999px;cursor:pointer}
+.pn-chips button.on{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+.pn-contagem{margin-left:auto;font-size:.78rem;color:var(--ink-2);font-weight:700}
+.pn-logo{width:34px;height:22px;object-fit:contain;flex:none}
+.pn-cia-txt{font-weight:800;font-size:.7rem;color:var(--ink-2);letter-spacing:.02em}
+.pn-idcia{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:52px}
 .pn-lista{max-height:268px;overflow-y:auto;border-top:1px solid var(--line)}
-.pn-linha{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;padding:12px 24px;border-bottom:1px solid var(--line);align-items:center}
+.pn-linha{display:grid;grid-template-columns:auto auto 1fr auto;gap:4px 12px;padding:12px 24px;border-bottom:1px solid var(--line);align-items:center}
 .pn-linha:last-child{border-bottom:0}
 .pn-voo{font-weight:800;font-size:.9rem;color:var(--ink);white-space:nowrap}
 .pn-cia{display:block;font-weight:400;font-size:.72rem;color:var(--ink-2)}
 .pn-ponta{font-size:.9rem;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pn-hora{text-align:right;font-weight:800;font-size:.9rem;white-space:nowrap}
 .pn-hora s{color:var(--ink-2);font-weight:400;font-size:.78rem;margin-right:5px}
-.pn-meta{grid-column:2/4;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.pn-meta{grid-column:3/5;display:flex;justify-content:space-between;gap:10px;align-items:center}
 .pn-status{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:3px 9px;border-radius:999px;background:var(--mist);color:var(--ink-2);white-space:nowrap}
 .pn-status.atrasado{background:#FFF0C2;color:#8A6A10}
 .pn-status.cancelado{background:#FBE0DD;color:#B3261E}
@@ -673,9 +685,20 @@ details[open] .a{animation:panelIn .3s ease}
 .pn-rodape a{color:var(--ink);font-weight:750}
 @media (max-width:720px){
   .pn-lista{max-height:320px}
-  .pn-linha{padding:12px 18px}
-  .pn-busca{margin:0 18px 14px}
-  .pn-topo{padding:18px 18px 12px}
+  .pn-linha{padding:12px 16px;gap:4px 10px}
+  .pn-busca-area{padding:0 16px 14px}
+  .pn-topo{padding:18px 16px 12px}
+  .pn-logo{width:30px;height:20px}
+}
+/* No celular a busca sobe e o texto de apoio desce */
+@media (max-width:980px){
+  .hero-grid{display:flex;flex-direction:column;gap:20px}
+  .hero-grid > div:first-child{display:contents}
+  .hero-grid .pill{order:1}
+  .hero-grid h1{order:2}
+  .hero-grid .painel{order:3}
+  .hero-grid .hero-lead{order:4;margin:0}
+  .hero-grid .hero-cta{order:5;margin:0}
 }
 </style>
 </head>
@@ -814,10 +837,19 @@ details[open] .a{animation:panelIn .3s ease}
       <button type="button" role="tab" id="pnPartidas" aria-selected="false">Partidas</button>
     </div>
   </div>
-  <label class="pn-busca">
-    <svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>
-    <input type="search" id="pnBusca" placeholder="Nº do voo, cidade ou companhia" aria-label="Buscar voo por número, cidade ou companhia" autocomplete="off">
-  </label>
+  <div class="pn-busca-area">
+    <label class="pn-busca">
+      <svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>
+      <input type="search" id="pnBusca" placeholder="Nº do voo, cidade ou companhia" aria-label="Buscar voo por número, cidade ou companhia" autocomplete="off">
+      <button type="button" id="pnLimpar" class="pn-limpar" aria-label="Limpar busca" hidden>&times;</button>
+    </label>
+    <div class="pn-chips" role="group" aria-label="Filtros rápidos">
+      <button type="button" class="on" data-filtro="todos">Todos</button>
+      <button type="button" data-filtro="atrasado">Atrasados</button>
+      <button type="button" data-filtro="cancelado">Cancelados</button>
+      <span class="pn-contagem" id="pnContagem"></span>
+    </div>
+  </div>
   <div class="pn-lista" id="pnLista" aria-live="polite">
     <p class="pn-aviso">Carregando os voos...</p>
   </div>
@@ -946,7 +978,10 @@ details[open] .a{animation:panelIn .3s ease}
   var bChe = document.getElementById('pnChegadas');
   var bPar = document.getElementById('pnPartidas');
   var rodape = document.getElementById('pnAtualizado');
-  var tipo = 'arrival', dados = [], carregando = false;
+  var contagem = document.getElementById('pnContagem');
+  var limpar = document.getElementById('pnLimpar');
+  var chips = [].slice.call(document.querySelectorAll('.pn-chips button'));
+  var tipo = 'arrival', filtro = 'todos', dados = [], carregando = false;
 
   var OFICIAL = '<a href="https://www.bh-airport.com.br/pt-BR/find-your-flight" target="_blank" rel="noopener">painel oficial da BH Airport</a>';
 
@@ -965,10 +1000,15 @@ details[open] .a{animation:panelIn .3s ease}
   }
   function desenha() {
     var termo = (busca.value || '').trim().toLowerCase();
+    limpar.hidden = !termo;
     var vis = dados.filter(function (v) {
+      var cls = classeStatus(v);
+      if (filtro === 'atrasado' && cls !== 'atrasado') return false;
+      if (filtro === 'cancelado' && cls !== 'cancelado') return false;
       if (!termo) return true;
       return (v.voo + ' ' + v.cia + ' ' + v.ponta).toLowerCase().indexOf(termo) > -1;
     });
+    contagem.textContent = vis.length ? (vis.length + (vis.length > 1 ? ' voos' : ' voo')) : '';
     if (!vis.length) {
       lista.innerHTML = '<p class="pn-aviso">' + (termo
         ? 'Nenhum voo encontrado para essa busca. Tente o número do voo ou a cidade.'
@@ -978,8 +1018,12 @@ details[open] .a{animation:panelIn .3s ease}
     lista.innerHTML = vis.slice(0, 80).map(function (v) {
       var cls = classeStatus(v);
       var atrasou = cls === 'atrasado';
+      var logo = v.slug
+        ? '<img class="pn-logo" src="logos-cia/' + esc(v.slug) + '.png" alt="' + esc(v.cia) + '" width="34" height="22" decoding="async">'
+        : '<span class="pn-cia-txt">' + esc(v.cia) + '</span>';
       return '<div class="pn-linha">' +
-        '<span class="pn-voo">' + esc(v.voo) + '<span class="pn-cia">' + esc(v.cia) + '</span></span>' +
+        '<span class="pn-idcia">' + logo + '</span>' +
+        '<span class="pn-voo">' + esc(v.voo) + '</span>' +
         '<span class="pn-ponta">' + esc(v.ponta) + '</span>' +
         '<span class="pn-hora">' + (atrasou ? '<s>' + esc(v.previsto) + '</s>' : '') + esc(v.estimado || v.previsto) + '</span>' +
         '<span class="pn-meta">' +
@@ -987,6 +1031,14 @@ details[open] .a{animation:panelIn .3s ease}
           (v.portao ? '<span class="pn-portao">portão ' + esc(v.portao) + '</span>' : '<span></span>') +
         '</span></div>';
     }).join('');
+    [].forEach.call(lista.querySelectorAll('.pn-logo'), function (img) {
+      img.addEventListener('error', function () {
+        var t = document.createElement('span');
+        t.className = 'pn-cia-txt';
+        t.textContent = img.getAttribute('alt') || '';
+        if (img.parentNode) { img.parentNode.replaceChild(t, img); }
+      });
+    });
   }
   function carrega() {
     if (carregando) return;
@@ -1019,6 +1071,15 @@ details[open] .a{animation:panelIn .3s ease}
   bChe.addEventListener('click', function () { troca('arrival', bChe, bPar); });
   bPar.addEventListener('click', function () { troca('departure', bPar, bChe); });
   busca.addEventListener('input', desenha);
+  limpar.addEventListener('click', function () { busca.value = ''; busca.focus(); desenha(); });
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      chips.forEach(function (x) { x.classList.remove('on'); });
+      c.classList.add('on');
+      filtro = c.getAttribute('data-filtro');
+      desenha();
+    });
+  });
   carrega();
   setInterval(carrega, 180000);
 })();
