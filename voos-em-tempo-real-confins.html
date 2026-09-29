@@ -641,6 +641,43 @@ details[open] .a{animation:panelIn .3s ease}
 .figs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media (max-width:860px){.figs{grid-template-columns:1fr}}
 </style>
+<style>
+.painel{background:#fff;border-radius:var(--r-lg);border-top:6px solid var(--yellow);box-shadow:0 20px 50px -24px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden}
+.pn-topo{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:22px 24px 14px;flex-wrap:wrap}
+.pn-topo h2{font-size:1.3rem;font-variation-settings:"wdth" 85;margin:0}
+.pn-sub{color:var(--ink-2);font-size:.85rem;margin-top:2px}
+.pn-toggle{display:flex;background:var(--mist);border-radius:999px;padding:3px;flex:none}
+.pn-toggle button{border:0;background:none;font:inherit;font-size:.82rem;font-weight:750;padding:7px 14px;border-radius:999px;cursor:pointer;color:var(--ink-2)}
+.pn-toggle button.on{background:var(--ink);color:#fff}
+.pn-busca{display:flex;align-items:center;gap:10px;margin:0 24px 14px;background:var(--mist);border:1px solid var(--line);border-radius:999px;padding:0 18px}
+.pn-busca .ic{width:17px;height:17px;color:var(--yellow-deep);flex:none}
+.pn-busca input{border:0;background:none;font:inherit;font-size:.95rem;padding:13px 0;width:100%;outline:none;color:var(--ink)}
+.pn-lista{max-height:268px;overflow-y:auto;border-top:1px solid var(--line)}
+.pn-linha{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;padding:12px 24px;border-bottom:1px solid var(--line);align-items:center}
+.pn-linha:last-child{border-bottom:0}
+.pn-voo{font-weight:800;font-size:.9rem;color:var(--ink);white-space:nowrap}
+.pn-cia{display:block;font-weight:400;font-size:.72rem;color:var(--ink-2)}
+.pn-ponta{font-size:.9rem;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pn-hora{text-align:right;font-weight:800;font-size:.9rem;white-space:nowrap}
+.pn-hora s{color:var(--ink-2);font-weight:400;font-size:.78rem;margin-right:5px}
+.pn-meta{grid-column:2/4;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.pn-status{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:3px 9px;border-radius:999px;background:var(--mist);color:var(--ink-2);white-space:nowrap}
+.pn-status.atrasado{background:#FFF0C2;color:#8A6A10}
+.pn-status.cancelado{background:#FBE0DD;color:#B3261E}
+.pn-status.acao{background:#FFC20E;color:#242322}
+.pn-status.feito{background:#EDECE7;color:#6E6A63}
+.pn-portao{font-size:.74rem;color:var(--ink-2);white-space:nowrap}
+.pn-aviso{padding:26px 24px;color:var(--ink-2);font-size:.9rem;line-height:1.55}
+.pn-aviso a{color:var(--ink);font-weight:700}
+.pn-rodape{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 24px;border-top:1px solid var(--line);background:var(--mist);font-size:.78rem;color:var(--ink-2);flex-wrap:wrap}
+.pn-rodape a{color:var(--ink);font-weight:750}
+@media (max-width:720px){
+  .pn-lista{max-height:320px}
+  .pn-linha{padding:12px 18px}
+  .pn-busca{margin:0 18px 14px}
+  .pn-topo{padding:18px 18px 12px}
+}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHWNDGH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -760,17 +797,35 @@ details[open] .a{animation:panelIn .3s ease}
     <div>
       <span class="pill"><span class="roof">VOOS</span>Chegadas, partidas e o que fazer quando atrasa</span>
       <h1>Voos em tempo real em <span class="hl">Confins</span></h1>
-      <p class="hero-lead">O painel oficial da BH Airport mostra chegadas e partidas atualizadas. O que quase ninguém sabe é <strong>ler o status direito</strong> e o que fazer quando ele muda para atrasado.</p>
+      <p class="hero-lead">Aqui ao lado estão as <strong>chegadas e partidas de agora</strong>, com os dados do painel oficial da BH Airport. Busque pelo número do voo, pela cidade ou pela companhia.</p>
       <div class="hero-cta">
         
         <a class="rating" href="#como-consultar"><span><b>Como consultar</b>painel oficial e alternativas</span></a>
       </div>
     </div>
-    <aside class="quick">
-      <h2>A resposta curta</h2>
-      <p class="qs">O essencial de quem está acompanhando um voo:</p>
-      <ul><li><span class="qi"><svg class="ic"><use href="#i-plane"/></svg></span><span><b>O painel oficial é a fonte</b>A BH Airport mantém a consulta de chegadas e partidas atualizada. É o dado mais confiável para o dia.</span></li><li><span class="qi"><svg class="ic"><use href="#i-chat"/></svg></span><span><b>A companhia avisa primeiro</b>Mudança de horário costuma chegar antes pelo aplicativo ou SMS da companhia aérea do que no painel.</span></li><li><span class="qi"><svg class="ic"><use href="#i-clock"/></svg></span><span><b>Atraso muda a sua logística</b>Quem vai buscar alguém, ou tem transfer marcado, precisa ajustar o horário da saída de casa.</span></li><li><span class="qi"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>No transfer, isso já é acompanhado</b>O horário real de chegada é monitorado e a espera é ajustada, sem você precisar avisar.</span></li></ul>
-    </aside>
+<aside class="painel" id="painel">
+  <div class="pn-topo">
+    <div>
+      <h2>Voos agora em Confins</h2>
+      <p class="pn-sub">Dados do painel oficial da BH Airport</p>
+    </div>
+    <div class="pn-toggle" role="tablist" aria-label="Chegadas ou partidas">
+      <button type="button" role="tab" id="pnChegadas" class="on" aria-selected="true">Chegadas</button>
+      <button type="button" role="tab" id="pnPartidas" aria-selected="false">Partidas</button>
+    </div>
+  </div>
+  <label class="pn-busca">
+    <svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>
+    <input type="search" id="pnBusca" placeholder="Nº do voo, cidade ou companhia" aria-label="Buscar voo por número, cidade ou companhia" autocomplete="off">
+  </label>
+  <div class="pn-lista" id="pnLista" aria-live="polite">
+    <p class="pn-aviso">Carregando os voos...</p>
+  </div>
+  <div class="pn-rodape">
+    <span id="pnAtualizado">Fonte: BH Airport</span>
+    <a href="https://www.bh-airport.com.br/pt-BR/find-your-flight" target="_blank" rel="noopener">Painel oficial</a>
+  </div>
+</aside>
   </div>
   <div class="wrap cue">
     <a href="#como-consultar">Continue: como consultar e o que cada status quer dizer <svg class="ic"><use href="#i-chev"/></svg></a>
@@ -881,6 +936,91 @@ details[open] .a{animation:panelIn .3s ease}
       doGTranslate(b.getAttribute('data-lang'));
     });
   });
+})();
+</script>
+<script>
+(function () {
+  var lista = document.getElementById('pnLista');
+  if (!lista) return;
+  var busca = document.getElementById('pnBusca');
+  var bChe = document.getElementById('pnChegadas');
+  var bPar = document.getElementById('pnPartidas');
+  var rodape = document.getElementById('pnAtualizado');
+  var tipo = 'arrival', dados = [], carregando = false;
+
+  var OFICIAL = '<a href="https://www.bh-airport.com.br/pt-BR/find-your-flight" target="_blank" rel="noopener">painel oficial da BH Airport</a>';
+
+  function classeStatus(v) {
+    var s = (v.status || '').toLowerCase();
+    if (s.indexOf('cancel') > -1) return 'cancelado';
+    if (s.indexOf('embarque') > -1 || s.indexOf('chamada') > -1 || s.indexOf('portão') > -1 || s.indexOf('portao') > -1) return 'acao';
+    if (s.indexOf('decolou') > -1 || s.indexOf('pouso') > -1 || s.indexOf('bagagem') > -1 || s.indexOf('pátio') > -1 || s.indexOf('patio') > -1 || s.indexOf('encerrado') > -1) return 'feito';
+    if (v.estimado && v.previsto && v.estimado !== v.previsto && v.estimado > v.previsto) return 'atrasado';
+    return '';
+  }
+  function esc(t) {
+    return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c];
+    });
+  }
+  function desenha() {
+    var termo = (busca.value || '').trim().toLowerCase();
+    var vis = dados.filter(function (v) {
+      if (!termo) return true;
+      return (v.voo + ' ' + v.cia + ' ' + v.ponta).toLowerCase().indexOf(termo) > -1;
+    });
+    if (!vis.length) {
+      lista.innerHTML = '<p class="pn-aviso">' + (termo
+        ? 'Nenhum voo encontrado para essa busca. Tente o número do voo ou a cidade.'
+        : 'Nenhum voo para mostrar agora. Consulte o ' + OFICIAL + '.') + '</p>';
+      return;
+    }
+    lista.innerHTML = vis.slice(0, 80).map(function (v) {
+      var cls = classeStatus(v);
+      var atrasou = cls === 'atrasado';
+      return '<div class="pn-linha">' +
+        '<span class="pn-voo">' + esc(v.voo) + '<span class="pn-cia">' + esc(v.cia) + '</span></span>' +
+        '<span class="pn-ponta">' + esc(v.ponta) + '</span>' +
+        '<span class="pn-hora">' + (atrasou ? '<s>' + esc(v.previsto) + '</s>' : '') + esc(v.estimado || v.previsto) + '</span>' +
+        '<span class="pn-meta">' +
+          '<span class="pn-status ' + cls + '">' + esc(v.status || 'Previsto') + '</span>' +
+          (v.portao ? '<span class="pn-portao">portão ' + esc(v.portao) + '</span>' : '<span></span>') +
+        '</span></div>';
+    }).join('');
+  }
+  function carrega() {
+    if (carregando) return;
+    carregando = true;
+    fetch('voos-api.php?type=' + tipo, { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('falhou'); return r.json(); })
+      .then(function (j) {
+        if (!j.ok || !j.voos) throw new Error('sem dados');
+        dados = j.voos;
+        var d = new Date(j.atualizadoEm);
+        var hh = isNaN(d) ? '' : (' ' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2));
+        rodape.textContent = 'Fonte: BH Airport, atualizado às' + hh;
+        desenha();
+      })
+      .catch(function () {
+        dados = [];
+        lista.innerHTML = '<p class="pn-aviso">Não consegui carregar os voos agora. Consulte direto no ' + OFICIAL + '.</p>';
+        rodape.textContent = 'Fonte: BH Airport';
+      })
+      .then(function () { carregando = false; });
+  }
+  function troca(novo, ligado, desligado) {
+    if (tipo === novo) return;
+    tipo = novo;
+    ligado.classList.add('on'); ligado.setAttribute('aria-selected', 'true');
+    desligado.classList.remove('on'); desligado.setAttribute('aria-selected', 'false');
+    lista.innerHTML = '<p class="pn-aviso">Carregando os voos...</p>';
+    carrega();
+  }
+  bChe.addEventListener('click', function () { troca('arrival', bChe, bPar); });
+  bPar.addEventListener('click', function () { troca('departure', bPar, bChe); });
+  busca.addEventListener('input', desenha);
+  carrega();
+  setInterval(carrega, 180000);
 })();
 </script>
 </body>
