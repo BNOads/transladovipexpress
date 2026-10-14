@@ -29,7 +29,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-860019473');
-  dataLayer.push({page_variant: 'rota-serra-do-cipo'});
+  dataLayer.push({page_variant: 'rota-nova-lima'});
   function gtag_report_conversion(url) {
     var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
     gtag('event', 'conversion', { 'send_to': 'AW-860019473/ZFyNCN_o2NwBEJG2i5oD', 'event_callback': callback });
@@ -760,7 +760,7 @@ details[open] .a{animation:panelIn .3s ease}
     var a = e.target.closest && e.target.closest('a');
     if (!a || !a.href) return;
     if (a.href.indexOf('api.whatsapp.com/send') > -1) {
-      window.dataLayer.push({ event: 'whatsapp_click', page_variant: 'rota-serra-do-cipo', cta: a.getAttribute('data-cta') || '' });
+      window.dataLayer.push({ event: 'whatsapp_click', page_variant: 'rota-nova-lima', cta: a.getAttribute('data-cta') || '' });
     }
   });
   var hdr = d.getElementById('hdr');
