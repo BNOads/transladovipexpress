@@ -1,30 +1,44 @@
 <?php
+session_start();
 
-$radio = $_GET['radio'] ?? '';
-$nome = $_GET['nome'] ?? '';
-$telefone = $_GET['telefone'] ?? '';
-$mensagem = $_GET['mensagem'] ?? '';
-$local = $_GET["local"] ?? '';
-$localfinal = $_GET["localfinal"] ?? '';
-$kids = $_GET["kids"] ?? '';
-$quant = $_GET["quant"] ?? '';
-$malagrande = $_GET["malag"] ?? '';
-$maladebordo = $_GET["malab"] ?? '';
-
-$dataAmericana = $_GET['data'] ?? '';
-
-if ($dataAmericana) {
-	$datetime = DateTime::createFromFormat('Y-m-d\TH:i', $dataAmericana);
-	$dataFormatada = $datetime ? $datetime->format('d/m/Y \à\s H:i') : 'Data inválida';
-} else {
-	$dataFormatada = 'Não informada';
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    header('Allow: POST');
+    exit('Método inválido. Volte ao formulário para solicitar um orçamento.');
 }
 
-// ─────────────────────────────────────────────────────────────
-// INTEGRAÇÃO COM CRM / ORÇAMENTOS (Translado VIP Express)
-// Envia os dados para o sistema interno antes de ir ao WhatsApp
-// O link do orçamento é enviado manualmente depois pelo atendente
-// ─────────────────────────────────────────────────────────────
+$submissionToken = $_POST['submission_token'] ?? '';
+$formTokens = $_SESSION['contact_form_tokens'] ?? [];
+$tokenCreatedAt = is_string($submissionToken) ? ($formTokens[$submissionToken] ?? null) : null;
+if (!$tokenCreatedAt || !is_int($tokenCreatedAt) || $tokenCreatedAt < time() - 1800) {
+    http_response_code(409);
+    exit('Este formulário já foi enviado ou expirou. Volte ao formulário e tente novamente.');
+}
+
+// Consumir antes do envio ao CRM. O bloqueio da sessão serializa dois POSTs simultâneos.
+unset($_SESSION['contact_form_tokens'][$submissionToken]);
+session_write_close();
+
+$radio = trim((string)($_POST['radio'] ?? ''));
+$nome = trim((string)($_POST['nome'] ?? ''));
+$telefone = trim((string)($_POST['telefone'] ?? ''));
+$mensagem = trim((string)($_POST['mensagem'] ?? ''));
+$local = trim((string)($_POST['local'] ?? ''));
+$localfinal = trim((string)($_POST['localfinal'] ?? ''));
+$kids = trim((string)($_POST['kids'] ?? ''));
+$quant = trim((string)($_POST['quant'] ?? ''));
+$malagrande = trim((string)($_POST['malag'] ?? ''));
+$maladebordo = trim((string)($_POST['malab'] ?? ''));
+$dataAmericana = trim((string)($_POST['data'] ?? ''));
+
+if ($nome === '' || $telefone === '') {
+    http_response_code(422);
+    exit('Informe seu nome e telefone. Volte ao formulário para corrigir os dados.');
+}
+
+$datetime = $dataAmericana !== '' ? DateTime::createFromFormat('!Y-m-d\TH:i', $dataAmericana) : false;
+$dataFormatada = $datetime ? $datetime->format('d/m/Y \à\s H:i') : 'Não informada';
+
 $payload = json_encode([
 	'nome' => $nome,
 	'telefone' => $telefone,
@@ -48,76 +62,24 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 curl_setopt($ch, CURLOPT_TIMEOUT, 5); // não trava a página se a API demorar
 curl_exec($ch);
 curl_close($ch);
-// ─────────────────────────────────────────────────────────────
 
-// Monta o Corpo da Mensagem para o WhatsApp
-$email_conteudo = "*ORÇAMENTO DE TÁXI* %0A%0A";
-$email_conteudo .= "*Nome*: $nome %0A";
-$email_conteudo .= "*Email*: $email %0A";
-$email_conteudo .= "*Telefone*: $telefone %0A";
-$email_conteudo .= "*Passageiros Adultos*: $quant %0A";
-$email_conteudo .= "*Crianças*: $kids %0A";
-$email_conteudo .= "*Malas grandes*: $malagrande %0A";
-$email_conteudo .= "*Malas de bordo*: $maladebordo %0A";
-$email_conteudo .= "*Cadeirinha*: $radio %0A";
-$email_conteudo .= "*Data Da Corrida*: $dataFormatada %0A";
-$email_conteudo .= "*Ponto de partida*: $local %0A";
-$email_conteudo .= "*Local De Destino*: $localfinal %0A%0A";
-$email_conteudo .= "*Detalhamento da corrida*: $mensagem %0A%0A";
-?>
-<!DOCTYPE HTML>
-
-<html lang="pt-BR">
-
-<head>
-
-	<title>Tabela Táxi Aeroporto 2022</title>
-
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="main.css" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta name="theme-color" content="#362929">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#362929">
-	<meta property="og:locale" content="_ptBR">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-		crossorigin="anonymous"></script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98388796-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-98388796-1');
-	</script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-flexdatalist/2.3.0/jquery.flexdatalist.min.js"
-		integrity="sha512-JEX6Es4Dhu4vQWWA+vVBNJzwejdpqeGeii0sfiWJbBlAfFzkeAy6WOxPYA4HEVeCHwAPa+8pDZQt8rLKDDGHgw=="
-		crossorigin="anonymous"></script>
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/jquery-flexdatalist/2.3.0/jquery.flexdatalist.min.css"
-		integrity="sha512-feX1WY95JHQ//uffCG42xy0PofA6DAZSEgIQMMOmRBbSmmOoz/J52azXXLM3kYa9EkQ5PlOHFFCgqpnPJ1oYpg=="
-		crossorigin="anonymous" />
-	<link rel="shortcut icon" href="icone.webp" type="image/webp" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css"
-		integrity="sha256-wX/yv3XrMHL9ho8i2z4rFw6B6cKKtxFiBuB2S+CRlmw=" crossorigin="anonymous" />
-	<link rel="manifest" href="manifest/manifest.json">
-	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="icon" sizes="192x192" href="icon2.png">
-	<meta name="theme-color" content="#09545e">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="Tabela Táxi do Aeroporto 2022">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#09545e">
-	<link rel="apple-touch-icon-precomposed" href="icon2.png">
-
-	<meta http-equiv="refresh"
-		content="2; URL='https://api.whatsapp.com/send?phone=5531972174387&text=<?php echo $email_conteudo; ?>'" />
-
-</head>
-
-<body>
-</body>
-
-</html>
+$whatsappMessage = "ORÇAMENTO DE TÁXI\n\n"
+    . "Nome: {$nome}\n"
+    . "Telefone: {$telefone}\n"
+    . "Passageiros adultos: {$quant}\n"
+    . "Crianças: {$kids}\n"
+    . "Malas grandes: {$malagrande}\n"
+    . "Malas de bordo: {$maladebordo}\n"
+    . "Cadeirinha: {$radio}\n"
+    . "Data da corrida: {$dataFormatada}\n"
+    . "Ponto de partida: {$local}\n"
+    . "Destino: {$localfinal}\n\n"
+    . "Detalhes: {$mensagem}";
+$whatsappUrl = 'https://api.whatsapp.com/send?' . http_build_query(
+    ['phone' => '5531972174387', 'text' => $whatsappMessage],
+    '',
+    '&',
+    PHP_QUERY_RFC3986
+);
+header('Location: ' . $whatsappUrl, true, 303);
+exit;

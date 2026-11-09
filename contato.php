@@ -1,3 +1,14 @@
+<?php
+session_start();
+$now = time();
+$tokens = $_SESSION['contact_form_tokens'] ?? [];
+foreach ($tokens as $token => $createdAt) {
+    if (!is_int($createdAt) || $createdAt < $now - 1800) unset($tokens[$token]);
+}
+$formToken = bin2hex(random_bytes(32));
+$tokens[$formToken] = $now;
+$_SESSION['contact_form_tokens'] = array_slice($tokens, -10, null, true);
+?>
 <html>
 
 <head>
@@ -407,7 +418,8 @@
 
 				<h1>✈️ Solicite seu Orçamento</h1>
 
-				<form action="enviozap.php" name="formulario" method="GET">
+				<form action="enviozap.php" name="formulario" method="POST" id="form-orcamento">
+					<input type="hidden" name="submission_token" value="<?= htmlspecialchars($formToken, ENT_QUOTES, 'UTF-8') ?>" />
 
 					<!-- Linha 1: Nome + WhatsApp -->
 					<div class="form-grid">
@@ -511,9 +523,18 @@
 							placeholder="Informe número do voo, observações especiais, etc." rows="4"></textarea>
 					</div>
 
-					<input type="submit" name="BTEnvia" value="Pedir Orçamento" class="btn-submit" />
+					<input type="submit" name="BTEnvia" value="Pedir Orçamento" class="btn-submit" id="btn-enviar-orcamento" />
 
 				</form>
+                <script>
+                document.getElementById('form-orcamento').addEventListener('submit', function (event) {
+                    if (!this.reportValidity()) { event.preventDefault(); return; }
+                    var button = document.getElementById('btn-enviar-orcamento');
+                    if (button.disabled) { event.preventDefault(); return; }
+                    button.disabled = true;
+                    button.value = 'Enviando...';
+                });
+                </script>
 
 			</div><!-- /.form-card -->
 
